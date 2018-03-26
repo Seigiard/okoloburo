@@ -2,8 +2,7 @@
 @import "http://fonts.fontstorage.com/import/montserrat.css";
 @import "http://fonts.fontstorage.com/import/ebgaramond.css";
 body {
-  background: #efeaef;
-  font-size: 16px; }
+  background: #efeaef; }
 
 .wrapper {
   background: #FAEDF4; }
@@ -11,22 +10,27 @@ body {
 .container {
   background: #fff; }
 
+html {
+  font-size: 23px; }
+
 body {
   padding: 2rem 3rem 3rem 2rem;
-  font-family: Roboto, sans-serif; }
+  font-family: "EB Garamond", serif;
+  line-height: 1.1; }
 
 h1 {
-  font: 500 5rem/1.4 'Montserrat', sans-serif; }
+  font: bold 2.609rem/1.4 'Montserrat', sans-serif; }
 
 h2 {
-  font: 3.2rem/1 'EB Garamond', serif;
+  font: 2.217rem/1 "EB Garamond", serif;
   padding: 0 0 1rem 0; }
 
 h3 {
-  font: 2.4rem/1.2 Roboto, sans-serif;
+  font: 1.652rem/1.2 Roboto, sans-serif;
   padding: 2rem 0 1rem 0; }
 
 h4 {
+  font: bold 0.87rem/1.2 Roboto, sans-serif;
   padding: 0 0 .5rem 0; }
 
 p {
@@ -36,7 +40,7 @@ img {
   max-width: 100%; }
 
 blockquote {
-  font: 2.4rem/1 'EB Garamond', serif; }
+  font: 1.652rem/1 'EB Garamond', serif; }
 
 .wrapper {
   max-width: 980px; }
@@ -51,6 +55,8 @@ figure {
 
 figcaption {
   padding: .5rem 0 0;
+  font-family: Roboto, sans-serif;
+  font-size: 0.739rem;
   max-width: 61.2%; }
 
 .youtube {
