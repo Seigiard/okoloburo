@@ -31,10 +31,18 @@ h3 {
 
 h4 {
   font: bold 0.87rem/1.2 Roboto, sans-serif;
-  padding: 0 0 .5rem 0; }
+  padding: 1rem 0 .5rem 0; }
 
-p {
+p, ul, ol {
   padding: 0 0 1rem 0; }
+
+p + ul, p + ol {
+  margin-top: -.7rem; }
+
+ul, ol {
+  padding-left: .85rem; }
+  ul li, ol li {
+    padding: 0 0 .3rem 0; }
 
 img {
   max-width: 100%; }
@@ -43,10 +51,36 @@ blockquote {
   font: 1.652rem/1 'EB Garamond', serif; }
 
 .wrapper {
-  max-width: 980px; }
+  max-width: 980px;
+  position: relative; }
 
 .container {
   width: 61.2%; }
+  .container aside {
+    position: absolute;
+    right: 0;
+    width: 32.8%;
+    font: normal 0.739rem/1.35 Roboto, sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+aside.note {
+  background: rgba(255, 222, 90, 0.36);
+  padding: 16px 18px 16px;
+  font-size: 0.783rem; }
+  aside.note h3 {
+    background: #ffde5a;
+    margin: -16px -18px 16px;
+    padding: 16px 18px 10px;
+    font: bold 1.391rem/1 Roboto, sans-serif;
+    letter-spacing: .1em; }
+
+aside.fact {
+  text-align: center; }
+  aside.fact b {
+    display: block;
+    font-size: 3.261rem;
+    line-height: 1; }
 
 figure {
   padding: 0 0 1rem 0; }
