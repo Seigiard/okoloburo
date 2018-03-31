@@ -29,6 +29,18 @@ html {
     line-height: 1.364rem;
     padding: 0 0 1rem;
     margin: 0; }
+  .article blockquote {
+    border: 1px solid #000;
+    border-width: 1px 0;
+    padding: 1.5rem 0 1.5rem;
+    margin: 1rem 0 2rem -53%;
+    text-align: center; }
+    .article blockquote, .article blockquote p {
+      font: 2.045rem/1.3 sans-serif; }
+    .article blockquote p:first-child {
+      padding-top: 0; }
+    .article blockquote p:last-child {
+      padding-bottom: 0; }
   .article aside {
     position: absolute;
     max-width: 25%;
@@ -42,6 +54,10 @@ html {
     .article figure figcaption, .article figure figcaption p {
       font-size: 0.727rem;
       line-height: 1rem; }
+  .article figure.full {
+    margin-left: -53%; }
+    .article figure.full figcaption {
+      padding-left: 34.6%; }
   @media only screen and (max-width: 800px) {
     .article {
       padding-left: 0; }

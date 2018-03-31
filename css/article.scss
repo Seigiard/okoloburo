@@ -36,6 +36,22 @@ html {
     padding: 0 0 1rem;
     margin: 0;
   }
+  blockquote {
+    border: 1px solid #000;
+    border-width: 1px 0;
+    padding: 1.5rem 0 1.5rem;
+    margin: 1rem 0 2rem -53%;
+    text-align: center;
+    &, p {
+      font: 2.045rem/1.3 sans-serif;
+    }
+    p:first-child {
+      padding-top: 0;
+    }
+    p:last-child {
+      padding-bottom: 0;
+    }
+  }
   aside {
     position: absolute;
     max-width: 25%;
@@ -52,6 +68,12 @@ html {
       &, p {
         font-size: 0.727rem;
         line-height: 1rem;
+      }
+    }
+    &.full {
+      margin-left: -53%;
+      figcaption {
+        padding-left: 34.6%;
       }
     }
   }
