@@ -1,110 +1,44 @@
-@import "http://fonts.fontstorage.com/import/roboto.css";
-@import "http://fonts.fontstorage.com/import/montserrat.css";
-@import "http://fonts.fontstorage.com/import/ebgaramond.css";
-body {
-  background: #efeaef; }
-
-.wrapper {
-  background: #FAEDF4; }
-
-.container {
-  background: #fff; }
-
 html {
-  font-size: 23px; }
-
-body {
-  padding: 2rem 3rem 3rem 2rem;
-  font-family: "EB Garamond", serif;
-  line-height: 1.1; }
-
-h1 {
-  font: bold 2.609rem/1.4 'Montserrat', sans-serif; }
-
-h2 {
-  font: 2.217rem/1 "EB Garamond", serif;
-  padding: 0 0 1rem 0; }
-
-h3 {
-  font: 1.652rem/1.2 Roboto, sans-serif;
-  padding: 2rem 0 1rem 0; }
-
-h4 {
-  font: bold 0.87rem/1.2 Roboto, sans-serif;
-  padding: 1rem 0 .5rem 0; }
-
-p, ul, ol {
-  padding: 0 0 1rem 0; }
-
-p + ul, p + ol {
-  margin-top: -.7rem; }
-
-ul, ol {
-  padding-left: .85rem; }
-  ul li, ol li {
-    padding: 0 0 .3rem 0; }
-
-img {
-  max-width: 100%; }
-
-blockquote {
-  font: 1.652rem/1 'EB Garamond', serif; }
-
-.wrapper {
-  max-width: 980px;
-  position: relative; }
+  font-size: 22px;
+  padding: 0 1.9rem; }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 20px; } }
+  @media only screen and (max-width: 1000px) {
+    html {
+      font-size: 18px; } }
+  @media only screen and (max-width: 800px) {
+    html {
+      font-size: 16px; } }
 
 .container {
-  width: 61.2%; }
-  .container aside {
+  max-width: 50.63636rem; }
+
+.article {
+  max-width: 41.81818rem;
+  margin: 0 auto;
+  padding-left: 28.6%;
+  position: relative; }
+  .article p {
+    font-size: 1rem;
+    line-height: 1.364rem;
+    padding: 0 0 1rem;
+    margin: 0; }
+  .article h2 {
+    font-size: 1rem;
+    line-height: 1.364rem;
+    padding: 0 0 1rem;
+    margin: 0; }
+  .article aside {
     position: absolute;
-    right: 0;
-    width: 32.8%;
-    font: normal 0.739rem/1.35 Roboto, sans-serif;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
-
-aside.note {
-  background: rgba(255, 222, 90, 0.36);
-  padding: 16px 18px 16px;
-  font-size: 0.783rem; }
-  aside.note h3 {
-    background: #ffde5a;
-    margin: -16px -18px 16px;
-    padding: 16px 18px 10px;
-    font: bold 1.391rem/1 Roboto, sans-serif;
-    letter-spacing: .1em; }
-
-aside.fact {
-  text-align: center; }
-  aside.fact b {
-    display: block;
-    font-size: 3.261rem;
-    line-height: 1; }
-
-figure {
-  padding: 0 0 1rem 0; }
-  figure.full-width {
-    margin-right: -63.39869%; }
-
-figcaption {
-  padding: .5rem 0 0;
-  font-family: Roboto, sans-serif;
-  font-size: 0.739rem;
-  max-width: 61.2%; }
-
-.youtube {
-  position: relative;
-  padding-top: 56.25%; }
-  .youtube iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%; }
-
-iframe {
-  width: 100%;
-  height: auto; }
+    max-width: 25%;
+    left: 0; }
+    .article aside, .article aside p {
+      font-size: 0.727rem;
+      line-height: 1rem; }
+  @media only screen and (max-width: 800px) {
+    .article {
+      padding-left: 0; }
+      .article aside {
+        position: static;
+        max-width: 100%; } }

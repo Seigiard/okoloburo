@@ -1,138 +1,56 @@
-@import "http://fonts.fontstorage.com/import/roboto.css";
-@import "http://fonts.fontstorage.com/import/montserrat.css";
-@import "http://fonts.fontstorage.com/import/ebgaramond.css";
-
-$container-width: 61.2%;
-$container-margin-right: ((100 - $container-width) / $container-width) *  100%;
-$serif: 'EB Garamond', serif;
-$sans-serif: Roboto, sans-serif;
-
-body {
-  background: #efeaef;
-}
-.wrapper {
-  background: #FAEDF4;
-}
-.container {
-  background: #fff;
-}
-
+$base-font-size: 22px;
+$container-width-px: 1114px;
+$article-width-px: 920px;
+$container-width: ($container-width-px/$base-font-size) * 1rem;
+$article-width: ($article-width-px/$base-font-size) * 1rem;
 html {
-  font-size: 23px;
-}
-
-body {
-  padding: 2rem 3rem 3rem 2rem;
-  font-family: $serif;
-  line-height: 1.1;
-}
-
-h1 {
-  font: bold 2.609rem/1.4 'Montserrat', sans-serif;
-}
-
-h2 {
-  font: 2.217rem/1 $serif;
-  padding: 0 0 1rem 0;
-}
-
-h3 {
-  font: 1.652rem/1.2 $sans-serif;
-  padding: 2rem 0 1rem 0;
-}
-
-h4 {
-  font: bold 0.87rem/1.2 $sans-serif;
-  padding: 1rem 0 .5rem 0;
-}
-
-p, ul, ol {
-  padding: 0 0 1rem 0;
-}
-p + ul, p + ol {
-  margin-top: -.7rem;
-}
-ul, ol {
-  padding-left: .85rem;
-  li {
-    padding: 0 0 .3rem 0;
+  font-size: $base-font-size;
+  padding: 0 1.9rem;
+  @media only screen and (max-width: 1200px) {
+    font-size: $base-font-size - 2px;
+  }
+  @media only screen and (max-width: 1000px) {
+    font-size: $base-font-size - 4px;
+  }
+  @media only screen and (max-width: 800px) {
+    font-size: $base-font-size - 6px;
   }
 }
-img {
-  max-width: 100%;
-}
-
-blockquote {
-  font: 1.652rem/1 'EB Garamond', serif;
-}
-
-.wrapper {
-  max-width: 980px;
-  position: relative;
-}
-
 .container {
-  width: $container-width;
-  aside {
-    position: absolute;
-    right: 0;
-    width: 94% - $container-width;
-    font: normal 0.739rem/1.35 $sans-serif;
-    box-sizing: border-box;
-  }
-}
-
-aside.note {
-  background: rgba(255, 222, 90, 0.36);
-  padding: 16px 18px 16px;
-  font-size: 0.783rem;
-  h3 {
-    background: rgb(255, 222, 90);
-    margin: -16px -18px 16px;
-    padding: 16px 18px 10px;
-    font: bold 1.391rem/1 $sans-serif;
-    letter-spacing: .1em;
-  }
-}
-
-aside.fact {
-  text-align: center;
-  b {
-    display: block;
-    font-size: 3.261rem;
-    line-height: 1;
-  }
-}
-
-figure {
-  padding: 0 0 1rem 0;
-  &.full-width {
-    margin-right: -1 * $container-margin-right;
-  }
-}
-
-figcaption {
-  padding: .5rem 0 0;
-  font-family: $sans-serif;
-  font-size: 0.739rem;
   max-width: $container-width;
 }
-
-.youtube {
+.article {
+  max-width: $article-width;
+  margin: 0 auto;
+  padding-left: 28.6%;
   position: relative;
-  padding-top: 9 * 100% / 16;
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
+  p {
+    font-size: 1rem;
+    line-height: 1.364rem;
+    padding: 0 0 1rem;
+    margin: 0;
   }
-}
+  h2 {
+    font-size: 1rem;
+    line-height: 1.364rem;
+    padding: 0 0 1rem;
+    margin: 0;
+  }
+  aside {
+    position: absolute;
+    max-width: 25%;
+    left: 0;
+    &, p {
+      font-size: 0.727rem;
+      line-height: 1rem;
+    }
+  }
 
-iframe {
-  width: 100%;
-  height: auto;
+  @media only screen and (max-width: 800px) {
+    padding-left: 0;
+    aside {
+      position: static;
+      max-width: 100%;
+    }
+  }
 }
