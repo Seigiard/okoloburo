@@ -78,10 +78,12 @@ html {
         padding-bottom: 0;
       }
     }
-    &.full {
-      margin-left: -53%;
-      figcaption {
-        padding-left: 34.6%;
+    @media only screen and (min-width: 800px) {
+      &.full {
+        margin-left: -53%;
+        figcaption {
+          padding-left: 34.6%;
+        }
       }
     }
   }
