@@ -16,6 +16,11 @@ html {
     line-height: 1.4;
 }
 
+figure {
+    margin: 0;
+    padding: 0;
+}
+
 /*
  * A better looking default horizontal rule
  */
