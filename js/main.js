@@ -3,8 +3,12 @@ $(function() {
 
   function placeAsideToTopOfPrevSibling(i, e) {
     $el = $(e);
-    $prev = $el.prev('*:not(aside)');
+    $el.addClass('aside__positioned');
 
+    $prev = $el.prev('*:not(aside)');
+    if (!$prev) {
+      return;
+    }
     $el.css('top', $prev.position().top);
   }
 

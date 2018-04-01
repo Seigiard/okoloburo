@@ -1,50 +1,37 @@
-$base-font-size: 22px;
-$container-width-px: 1114px;
-$article-width-px: 920px;
-$container-width: ($container-width-px/$base-font-size) * 1rem;
-$article-width: ($article-width-px/$base-font-size) * 1rem;
-$width-breakpoint: 800px;
+@import '_variables.scss';
 
-html {
-  font-size: $base-font-size;
-  padding: 0 1.9rem;
-  @media only screen and (max-width: 1200px) {
-    font-size: $base-font-size - 2px;
-  }
-  @media only screen and (max-width: 1000px) {
-    font-size: $base-font-size - 4px;
-  }
-  @media only screen and (max-width: $width-breakpoint) {
-    font-size: $base-font-size - 6px;
-    padding: 0 1rem;
-  }
-}
 .container {
   max-width: $container-width;
+  margin: 0 rem(42px);
+  @media only screen and (max-width: $width-breakpoint) {
+    margin: 0 rem(22px);
+  }
 }
 .article {
   max-width: $article-width;
   margin: 0 auto;
   position: relative;
   p {
-    font-size: 1rem;
-    line-height: 1.364rem;
-    padding: 0 0 1rem;
+    font-size: rem(22px);
+    line-height: 1.3;
+    padding: 0 0 rem(20px);
     margin: 0;
   }
   h2 {
-    font-size: 1rem;
-    line-height: 1.364rem;
-    padding: 0 0 1rem;
+    font-size: rem(22px);
+    font-weight: bold;
+    line-height: 1.3;
+    padding: 0 0 rem(20px);
     margin: 0;
   }
   blockquote {
     border: 1px solid #000;
     border-width: 1px 0;
-    padding: 1.5rem 0 1.5rem;
-    margin: 1rem 0 2rem;
+    padding: rem(30px) 0 rem(30px);
+    margin: rem(20px) 0 rem(40px);
     text-align: center;
-    font:600 2.045rem/1.3 'IBM Plex Serif', Palatino Linotype, Book Antiqua3, Palatino, Georgia, serif;
+    font:600 rem(45px) 'IBM Plex Serif', Palatino Linotype, Book Antiqua3, Palatino, Georgia, serif;
+    line-height: 1.3;
     p {
       font-size: inherit;
       line-height: inherit;
@@ -56,35 +43,41 @@ html {
       padding-bottom: 0;
     }
     @media only screen and (max-width: $width-breakpoint) {
-      font-size: 1.5em;
+      font-size: rem(30px);
+      margin-left: rem(-22px);
+      margin-right: rem(-22px);
+      padding-left: rem(22px);
+      padding-right: rem(22px);
     }
   }
   aside {
     position: static;
     max-width: 100%;
     left: 0;
-    padding-top: 0.15rem;
-    font-size: 0.727rem;
-    line-height: 1rem;
+    padding-top: rem(4px);
+    font-size: rem(18px);
+    line-height: 1.3;
     p {
       font-size: inherit;
       line-height: inherit;
     }
     @media only screen and (max-width: $width-breakpoint) {
-      font-size: 0.875em;
-      padding-left: 1rem;
+      font-size: rem(19px);
       img {
         max-width: 50%;
       }
     }
   }
   figure {
-    padding: 0.364rem 0 0 0;
+    padding: rem(8px) 0 0 0;
+    img + img {
+      margin-top: rem(20px);
+    }
     figcaption {
-      padding-top: 0.3rem;
-      padding-bottom: 1rem;
-      font-size: 0.727rem;
-      line-height: 1rem;
+      padding-top: rem(7px);
+      padding-bottom: rem(20px);
+      font-size: rem(18px);
+      line-height: 1.3;
       p {
         font-size: inherit;
         line-height: inherit;
@@ -95,26 +88,50 @@ html {
       p:last-child {
         padding-bottom: 0;
       }
-      @media only screen and (max-width: $width-breakpoint) {
-        font-size: 0.875em;
+    }
+    @media only screen and (max-width: $width-breakpoint) {
+      margin: 0 rem(-22px);
+      figcaption {
+        font-size: rem(19px);
+        margin: 0 rem(22px);
       }
     }
   }
 
-  @media only screen and (min-width: $width-breakpoint) {
-    padding-left: 28.6%;
+  @media only screen and (min-width: $width-breakpoint+1) {
+    padding-left: 23.6%;
     aside {
       position: absolute;
-      max-width: 25%;
+      max-width: 23%;
     }
-    blockquote {
-      margin-left: -53%;
-    }
-    figure.full {
-      margin-left: -53%;
-      figcaption {
-        padding-left: 34.6%;
+    aside:not(.interviewer) {
+      display: none;
+      &.aside__positioned {
+        display: block;
       }
     }
+    blockquote {
+      margin-left: -40%;
+    }
+    figure.full {
+      margin-left: -40%;
+      figcaption {
+        padding-left: 28.5%;
+      }
+    }
+  }
+}
+
+.aside__positioned{
+  animation: asideShow ease-in-out .5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes asideShow{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
   }
 }

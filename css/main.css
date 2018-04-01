@@ -1,44 +1,167 @@
-/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+html {
+  font-size: 10px;
+  line-height: 1.15; }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 9px; } }
+  @media only screen and (max-width: 960px) {
+    html {
+      font-size: 8px; } }
+  @media only screen and (max-width: 800px) {
+    html {
+      font-size: 7px; } }
 
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+a {
+  color: #315591;
+  -webkit-text-decoration-color: #C3CCDC;
+  text-decoration-color: #C3CCDC; }
+  a:hover, a:focus {
+    text-decoration: none; }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+header {
+  background: #04284a url(../img/bg.jpg) top left no-repeat;
+  background-size: cover;
+  padding: 5.1rem 3.9rem 0;
+  margin-bottom: 6.3rem;
+  color: #fff; }
+  header a {
+    color: #fff;
+    -webkit-text-decoration-color: #aaa;
+    text-decoration-color: #aaa; }
+    header a:hover {
+      color: #c3a622;
+      -webkit-text-decoration-color: #c3a622;
+      text-decoration-color: #c3a622; }
+  header .wrapper {
+    background-color: #04284a;
+    max-width: 1114px;
+    padding-top: 5.2rem; }
+  header .container {
+    border: #c3a622 solid 1.5rem;
+    border-bottom: none;
+    margin: 0 5rem;
+    padding: 3.4rem 3.6rem 1.4rem;
+    position: relative; }
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
+.header--photo {
+  width: 55.5rem;
+  position: absolute;
+  right: -6.6rem;
+  bottom: 0; }
 
-/*
- * Remove default fieldset styles.
- */
+.header--label {
+  font-size: 2.4rem;
+  line-height: 1; }
+  .header--label span {
+    background-color: #ffea00;
+    color: #000;
+    display: inline-block;
+    padding: 0.4rem 1rem 0.8rem; }
 
-fieldset {
-    border: 0;
+.header--title {
+  font: 900 6.7rem Montserrat, sans-serif;
+  line-height: 1;
+  letter-spacing: -0.03rem;
+  max-width: 47rem;
+  margin: 0;
+  padding: 0.5rem 0 0 0;
+  position: relative;
+  z-index: 1; }
+
+.header--lead {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  max-width: 47rem;
+  padding-top: 1.8rem;
+  position: relative;
+  z-index: 1; }
+  .header--lead p {
+    font-size: inherit;
+    line-height: inherit; }
+  .header--lead p:first-child {
+    padding-top: 0; }
+  .header--lead p:last-child {
+    padding-bottom: 0; }
+
+.header--links {
+  font-size: 1.4rem;
+  padding: 7.1rem 0 0.8rem 5.4rem;
+  background: url(../img/icon-designer.png) bottom left no-repeat;
+  background-size: 3.8rem 7.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 1; }
+  .header--links a + a {
+    margin-left: 1.6rem; }
+
+.header--link__course {
+  margin-right: 1rem; }
+
+@media only screen and (max-width: 800px) {
+  header {
+    background: #04284a;
+    padding: 0; }
+  .header--photo {
+    width: 50%; }
+  .header--links {
+    font-size: 1.8rem; } }
+
+@media only screen and (max-width: 750px) {
+  header {
+    background: #04284a;
+    padding: 0; }
+    header .container {
+      padding-bottom: 0; }
+  .header--lead,
+  .header--title {
+    max-width: 750px; }
+  .header--title {
+    word-wrap: break-word; }
+  .header--links {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    line-height: 1.5;
+    padding: 3rem 0 1.4rem 4.6rem; }
+  .header--link__course {
+    white-space: nowrap;
+    margin: 0 0 0 10px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; }
+  .header--photo {
+    position: static;
+    width: 70%;
+    display: block;
+    margin: 1rem auto 0;
+    max-width: 400px; } }
+
+@media only screen and (max-width: 450px) {
+  header .wrapper {
+    padding-top: 3.5rem; }
+  header .container {
+    border: none;
     margin: 0;
-    padding: 0;
-}
+    padding: 0 3rem; } }
 
-/*
- * Allow only vertical resizing of textareas.
- */
+footer {
+  padding: 4rem 0 6rem; }
 
-textarea {
-    resize: vertical;
-}
+.article .likely + p {
+  padding-top: 2rem; }
 
+.link__channel {
+  display: inline-block;
+  border: 1px solid #315591;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 2.4rem; }
+  .link__channel:hover, .link__channel:focus {
+    background: #315591;
+    border-color: #315591;
+    color: #fff; }
 
 /*
  * Clearfix: contain floats
@@ -51,106 +174,66 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
 
 .clearfix:after {
-    clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
+  clear: both; }
 
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre {
+    white-space: pre-wrap !important; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
