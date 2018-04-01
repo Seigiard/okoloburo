@@ -9,7 +9,8 @@ html {
       font-size: 18px; } }
   @media only screen and (max-width: 800px) {
     html {
-      font-size: 16px; } }
+      font-size: 16px;
+      padding: 0 1rem; } }
 
 .container {
   max-width: 50.63636rem; }
@@ -17,7 +18,6 @@ html {
 .article {
   max-width: 41.81818rem;
   margin: 0 auto;
-  padding-left: 28.6%;
   position: relative; }
   .article p {
     font-size: 1rem;
@@ -33,43 +33,61 @@ html {
     border: 1px solid #000;
     border-width: 1px 0;
     padding: 1.5rem 0 1.5rem;
-    margin: 1rem 0 2rem -53%;
-    text-align: center; }
-    .article blockquote, .article blockquote p {
-      font: 600 2.045rem/1.3 'IBM Plex Serif', Palatino Linotype, Book Antiqua3, Palatino, Georgia, serif; }
+    margin: 1rem 0 2rem;
+    text-align: center;
+    font: 600 2.045rem/1.3 'IBM Plex Serif', Palatino Linotype, Book Antiqua3, Palatino, Georgia, serif; }
+    .article blockquote p {
+      font-size: inherit;
+      line-height: inherit; }
     .article blockquote p:first-child {
       padding-top: 0; }
     .article blockquote p:last-child {
       padding-bottom: 0; }
+    @media only screen and (max-width: 800px) {
+      .article blockquote {
+        font-size: 1.5em; } }
   .article aside {
-    position: absolute;
-    max-width: 25%;
+    position: static;
+    max-width: 100%;
     left: 0;
-    padding-top: 0.15rem; }
-    .article aside, .article aside p {
-      font-size: 0.727rem;
-      line-height: 1rem; }
+    padding-top: 0.15rem;
+    font-size: 0.727rem;
+    line-height: 1rem; }
+    .article aside p {
+      font-size: inherit;
+      line-height: inherit; }
+    @media only screen and (max-width: 800px) {
+      .article aside {
+        font-size: 0.875em;
+        padding-left: 1rem; }
+        .article aside img {
+          max-width: 50%; } }
   .article figure {
     padding: 0.364rem 0 0 0; }
     .article figure figcaption {
       padding-top: 0.3rem;
-      padding-bottom: 1rem; }
-      .article figure figcaption, .article figure figcaption p {
-        font-size: 0.727rem;
-        line-height: 1rem; }
+      padding-bottom: 1rem;
+      font-size: 0.727rem;
+      line-height: 1rem; }
+      .article figure figcaption p {
+        font-size: inherit;
+        line-height: inherit; }
       .article figure figcaption p:first-child {
         padding-top: 0; }
       .article figure figcaption p:last-child {
         padding-bottom: 0; }
-    @media only screen and (min-width: 800px) {
+      @media only screen and (max-width: 800px) {
+        .article figure figcaption {
+          font-size: 0.875em; } }
+  @media only screen and (min-width: 800px) {
+    .article {
+      padding-left: 28.6%; }
+      .article aside {
+        position: absolute;
+        max-width: 25%; }
+      .article blockquote {
+        margin-left: -53%; }
       .article figure.full {
         margin-left: -53%; }
         .article figure.full figcaption {
           padding-left: 34.6%; } }
-  @media only screen and (max-width: 800px) {
-    .article {
-      padding-top: 0;
-      padding-left: 0; }
-      .article aside {
-        position: static;
-        max-width: 100%; } }

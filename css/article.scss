@@ -3,6 +3,8 @@ $container-width-px: 1114px;
 $article-width-px: 920px;
 $container-width: ($container-width-px/$base-font-size) * 1rem;
 $article-width: ($article-width-px/$base-font-size) * 1rem;
+$width-breakpoint: 800px;
+
 html {
   font-size: $base-font-size;
   padding: 0 1.9rem;
@@ -12,8 +14,9 @@ html {
   @media only screen and (max-width: 1000px) {
     font-size: $base-font-size - 4px;
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: $width-breakpoint) {
     font-size: $base-font-size - 6px;
+    padding: 0 1rem;
   }
 }
 .container {
@@ -22,7 +25,6 @@ html {
 .article {
   max-width: $article-width;
   margin: 0 auto;
-  padding-left: 28.6%;
   position: relative;
   p {
     font-size: 1rem;
@@ -40,10 +42,12 @@ html {
     border: 1px solid #000;
     border-width: 1px 0;
     padding: 1.5rem 0 1.5rem;
-    margin: 1rem 0 2rem -53%;
+    margin: 1rem 0 2rem;
     text-align: center;
-    &, p {
-      font:600 2.045rem/1.3 'IBM Plex Serif', Palatino Linotype, Book Antiqua3, Palatino, Georgia, serif;
+    font:600 2.045rem/1.3 'IBM Plex Serif', Palatino Linotype, Book Antiqua3, Palatino, Georgia, serif;
+    p {
+      font-size: inherit;
+      line-height: inherit;
     }
     p:first-child {
       padding-top: 0;
@@ -51,15 +55,27 @@ html {
     p:last-child {
       padding-bottom: 0;
     }
+    @media only screen and (max-width: $width-breakpoint) {
+      font-size: 1.5em;
+    }
   }
   aside {
-    position: absolute;
-    max-width: 25%;
+    position: static;
+    max-width: 100%;
     left: 0;
     padding-top: 0.15rem;
-    &, p {
-      font-size: 0.727rem;
-      line-height: 1rem;
+    font-size: 0.727rem;
+    line-height: 1rem;
+    p {
+      font-size: inherit;
+      line-height: inherit;
+    }
+    @media only screen and (max-width: $width-breakpoint) {
+      font-size: 0.875em;
+      padding-left: 1rem;
+      img {
+        max-width: 50%;
+      }
     }
   }
   figure {
@@ -67,9 +83,11 @@ html {
     figcaption {
       padding-top: 0.3rem;
       padding-bottom: 1rem;
-      &, p {
-        font-size: 0.727rem;
-        line-height: 1rem;
+      font-size: 0.727rem;
+      line-height: 1rem;
+      p {
+        font-size: inherit;
+        line-height: inherit;
       }
       p:first-child {
         padding-top: 0;
@@ -77,23 +95,26 @@ html {
       p:last-child {
         padding-bottom: 0;
       }
-    }
-    @media only screen and (min-width: 800px) {
-      &.full {
-        margin-left: -53%;
-        figcaption {
-          padding-left: 34.6%;
-        }
+      @media only screen and (max-width: $width-breakpoint) {
+        font-size: 0.875em;
       }
     }
   }
 
-  @media only screen and (max-width: 800px) {
-    padding-top: 0;
-    padding-left: 0;
+  @media only screen and (min-width: $width-breakpoint) {
+    padding-left: 28.6%;
     aside {
-      position: static;
-      max-width: 100%;
+      position: absolute;
+      max-width: 25%;
+    }
+    blockquote {
+      margin-left: -53%;
+    }
+    figure.full {
+      margin-left: -53%;
+      figcaption {
+        padding-left: 34.6%;
+      }
     }
   }
 }
