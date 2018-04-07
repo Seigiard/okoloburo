@@ -15,11 +15,7 @@ html {
 }
 
 a {
-    color: $link-color;
-    text-decoration-color: $link-border-color;
-    &:hover, &:focus {
-        text-decoration: none;
-    }
+    @include link($link-color, $link-border-color, $link-color, #fff, 2px);
 }
 
 @import "_header.scss";
@@ -29,6 +25,7 @@ a {
     padding-top: rem(20px);
 }
 .link__channel {
+    @include link-reset();
     display: inline-block;
     border: 1px solid $link-color;
     border-radius: rem(5px);

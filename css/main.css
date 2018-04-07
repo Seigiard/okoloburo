@@ -13,31 +13,63 @@ html {
 
 a {
   color: #315591;
-  -webkit-text-decoration-color: #C3CCDC;
-  text-decoration-color: #C3CCDC; }
+  background: -webkit-linear-gradient(#C3CCDC 1px, transparent 1px);
+  background: -o-linear-gradient(#C3CCDC 1px, transparent 1px);
+  background: linear-gradient(#C3CCDC 1px, transparent 1px);
+  background-size: 1px 0.3rem;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  text-shadow: -1px 0 #fff, 1px 0 #fff;
+  text-decoration: none; }
   a:hover, a:focus {
-    text-decoration: none; }
+    color: #315591;
+    background: none; }
 
 header {
-  background: #04284a url(../img/bg.jpg) top left no-repeat;
+  background: #D14231 url(../img/bg.jpg) top left no-repeat;
   background-size: cover;
-  padding: 5.1rem 3.9rem 0;
-  margin-bottom: 6.3rem;
+  padding: 0 3.9rem;
+  margin: 0 auto 4rem;
   color: #fff; }
   header a {
     color: #fff;
-    -webkit-text-decoration-color: #aaa;
-    text-decoration-color: #aaa; }
-    header a:hover {
+    background: -webkit-linear-gradient(#aaa 1px, transparent 1px);
+    background: -o-linear-gradient(#aaa 1px, transparent 1px);
+    background: linear-gradient(#aaa 1px, transparent 1px);
+    background-size: 1px 0.1rem;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    text-shadow: -1px 0 #04284a, 1px 0 #04284a;
+    text-decoration: none; }
+    header a:hover, header a:focus {
       color: #c3a622;
-      -webkit-text-decoration-color: #c3a622;
-      text-decoration-color: #c3a622; }
+      background: none; }
+  header nav {
+    text-align: center;
+    position: relative;
+    z-index: 3; }
+  header a.header__link--main-page {
+    font: 600 2.7rem Montserrat, sans-serif;
+    line-height: 5.6rem;
+    color: #fff;
+    background: -webkit-linear-gradient(#ddd 1px, transparent 1px);
+    background: -o-linear-gradient(#ddd 1px, transparent 1px);
+    background: linear-gradient(#ddd 1px, transparent 1px);
+    background-size: 1px 0.3rem;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    text-shadow: -1px 0 #ed602d, 1px 0 #ed602d;
+    text-decoration: none; }
+    header a.header__link--main-page:hover, header a.header__link--main-page:focus {
+      color: #fff;
+      background: none; }
   header .wrapper {
     background-color: #04284a;
     max-width: 1114px;
-    padding-top: 5.2rem; }
+    padding-top: 5.2rem;
+    margin: 0 auto; }
   header .container {
-    border: #c3a622 solid 1.5rem;
+    border: #ffea00 solid 1.5rem;
     border-bottom: none;
     margin: 0 5rem;
     padding: 3.4rem 3.6rem 1.4rem;
@@ -152,6 +184,8 @@ footer {
   padding-top: 2rem; }
 
 .link__channel {
+  background: none;
+  text-shadow: none;
   display: inline-block;
   border: 1px solid #315591;
   border-radius: 0.5rem;

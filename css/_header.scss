@@ -1,26 +1,32 @@
 @import "_variables.scss";
 
 header {
-    background: #04284a url(../img/bg.jpg) top left no-repeat;
+    background: #D14231 url(../img/bg.jpg) top left no-repeat;
     background-size: cover;
-    padding: rem(51px) rem(39px) 0;
-    margin-bottom: rem(63px);
+    padding: 0 rem(39px);
+    margin: 0 auto rem(40px);
     color: #fff;
     a {
-        color: #fff;
-        text-decoration-color: #aaa;
-        &:hover {
-            color: #c3a622;
-            text-decoration-color: #c3a622;
-        }
+        @include link(#fff, #aaa, #c3a622, #04284a, 0px);
+    }
+    nav {
+        text-align: center;
+        position: relative;
+        z-index: 3;
+    }
+    a.header__link--main-page {
+        font: 600 rem(27px) Montserrat, sans-serif;
+        line-height: rem(56px);
+        @include link(#fff, #ddd, #fff, #ed602d, 2px);
     }
     .wrapper {
         background-color: #04284a;
         max-width: $container-width-px;
         padding-top: rem(52px);
+        margin: 0 auto;
     }
     .container {
-        border: #c3a622 solid rem(15px);
+        border: #ffea00 solid rem(15px);
         border-bottom: none;
         margin: 0 rem(50px);
         padding: rem(34px) rem(36px) rem(14px);
