@@ -1,0 +1,29 @@
+@function rem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+@mixin link($link-color, $link-border-color, $link-hover-color, $bg-color, $padding-bottom) {
+  color: $link-color;
+  background: linear-gradient($link-border-color 1px, transparent 1px);
+  background-size: 1px rem($padding-bottom + 1px);
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  text-shadow: -1px 0 $bg-color, 1px 0 $bg-color;
+  text-decoration: none;
+  &:hover, &:focus {
+      color: $link-hover-color;
+      background: none;
+  }
+}
+@mixin link-reset() {
+  background: none;
+  text-shadow: none;
+}
+
+$base-font-size: 10px;
+$container-width-px: 1230px;
+$article-width-px: 1020px;
+$container-width: rem($container-width-px);
+$article-width: rem($article-width-px);
+$width-breakpoint: 800px;
+$link-color: #315591;
+$link-border-color: #C3CCDC;

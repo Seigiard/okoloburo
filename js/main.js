@@ -6,10 +6,13 @@ $(function() {
     $el.addClass('aside__positioned');
 
     $prev = $el.prev('*:not(aside)');
-    if (!$prev) {
+
+    if (!$prev[0]) {
       return;
     }
-    $el.css('top', $prev.position().top);
+    const prevOffsetTop = parseInt($prev.position().top, 10);
+    const prevPaddingTop = parseInt($prev.css('paddingTop'), 10);
+    $el.css('top', (prevOffsetTop + prevPaddingTop) + 'px');
   }
 
   function plaseAsides() {
