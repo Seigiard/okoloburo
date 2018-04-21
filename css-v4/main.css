@@ -13,17 +13,23 @@ html {
 
 a {
   color: #315591;
-  background: -webkit-linear-gradient(#C3CCDC 1px, transparent 1px);
-  background: -o-linear-gradient(#C3CCDC 1px, transparent 1px);
-  background: linear-gradient(#C3CCDC 1px, transparent 1px);
-  background-size: 1px 0.15rem;
+  background-image: -webkit-linear-gradient(rgba(49, 85, 145, 0.2), rgba(49, 85, 145, 0.2) 1px, transparent 1px, transparent);
+  background-image: -o-linear-gradient(rgba(49, 85, 145, 0.2), rgba(49, 85, 145, 0.2) 1px, transparent 1px, transparent);
+  background-image: linear-gradient(rgba(49, 85, 145, 0.2), rgba(49, 85, 145, 0.2) 1px, transparent 1px, transparent);
+  background-size: 1px 0.1rem;
   background-position: left bottom;
   background-repeat: repeat-x;
   text-shadow: -1px 0 #fff, 1px 0 #fff;
   text-decoration: none; }
-  a:hover, a:focus {
-    color: #315591;
-    background: none; }
+  a:hover {
+    background-image: -webkit-linear-gradient(rgba(49, 85, 145, 0.4), rgba(49, 85, 145, 0.4) 1px, transparent 1px, transparent);
+    background-image: -o-linear-gradient(rgba(49, 85, 145, 0.4), rgba(49, 85, 145, 0.4) 1px, transparent 1px, transparent);
+    background-image: linear-gradient(rgba(49, 85, 145, 0.4), rgba(49, 85, 145, 0.4) 1px, transparent 1px, transparent); }
+  a:active {
+    color: #c3a622;
+    background-image: -webkit-linear-gradient(rgba(195, 166, 34, 0.4), rgba(195, 166, 34, 0.4) 1px, transparent 1px, transparent);
+    background-image: -o-linear-gradient(rgba(195, 166, 34, 0.4), rgba(195, 166, 34, 0.4) 1px, transparent 1px, transparent);
+    background-image: linear-gradient(rgba(195, 166, 34, 0.4), rgba(195, 166, 34, 0.4) 1px, transparent 1px, transparent); }
 
 p {
   font-size: 1rem;
@@ -105,17 +111,23 @@ header {
   color: #fff; }
   header a {
     color: #fff;
-    background: -webkit-linear-gradient(#aaa 1px, transparent 1px);
-    background: -o-linear-gradient(#aaa 1px, transparent 1px);
-    background: linear-gradient(#aaa 1px, transparent 1px);
-    background-size: 1px 0.05rem;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, transparent 1px, transparent);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, transparent 1px, transparent);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, transparent 1px, transparent);
+    background-size: 1px 1px;
     background-position: left bottom;
     background-repeat: repeat-x;
     text-shadow: -1px 0 #04284a, 1px 0 #04284a;
     text-decoration: none; }
-    header a:hover, header a:focus {
+    header a:hover {
+      background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 1px, transparent 1px, transparent);
+      background-image: -o-linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 1px, transparent 1px, transparent);
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 1px, transparent 1px, transparent); }
+    header a:active {
       color: #c3a622;
-      background: none; }
+      background-image: -webkit-linear-gradient(rgba(195, 166, 34, 0.4), rgba(195, 166, 34, 0.4) 1px, transparent 1px, transparent);
+      background-image: -o-linear-gradient(rgba(195, 166, 34, 0.4), rgba(195, 166, 34, 0.4) 1px, transparent 1px, transparent);
+      background-image: linear-gradient(rgba(195, 166, 34, 0.4), rgba(195, 166, 34, 0.4) 1px, transparent 1px, transparent); }
   header nav {
     text-align: center;
     position: relative;
@@ -126,17 +138,23 @@ header {
     line-height: 1.3;
     display: inline-block;
     color: #fff;
-    background: -webkit-linear-gradient(#ddd 1px, transparent 1px);
-    background: -o-linear-gradient(#ddd 1px, transparent 1px);
-    background: linear-gradient(#ddd 1px, transparent 1px);
-    background-size: 1px 0.15rem;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, transparent 1px, transparent);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, transparent 1px, transparent);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 1px, transparent 1px, transparent);
+    background-size: 1px 0.2rem;
     background-position: left bottom;
     background-repeat: repeat-x;
     text-shadow: -1px 0 #315591, 1px 0 #315591;
     text-decoration: none; }
-    header a.header__link--main-page:hover, header a.header__link--main-page:focus {
-      color: #fff;
-      background: none; }
+    header a.header__link--main-page:hover {
+      background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 1px, transparent 1px, transparent);
+      background-image: -o-linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 1px, transparent 1px, transparent);
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) 1px, transparent 1px, transparent); }
+    header a.header__link--main-page:active {
+      color: #c3a622;
+      background-image: -webkit-linear-gradient(rgba(195, 166, 34, 0.4), rgba(195, 166, 34, 0.4) 1px, transparent 1px, transparent);
+      background-image: -o-linear-gradient(rgba(195, 166, 34, 0.4), rgba(195, 166, 34, 0.4) 1px, transparent 1px, transparent);
+      background-image: linear-gradient(rgba(195, 166, 34, 0.4), rgba(195, 166, 34, 0.4) 1px, transparent 1px, transparent); }
   header .wrapper {
     background-color: #04284a;
     max-width: 1060px;
@@ -265,10 +283,14 @@ header.qa {
       display: none !important; }
   .header--link__course {
     white-space: nowrap;
-    margin: 0 0 0 0.75rem;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%; }
+    margin: 0 0 0 0.75rem; }
+    .header--link__course:after {
+      content: '';
+      display: block;
+      height: 1px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%; }
   .header--photo {
     position: static;
     width: 70%;
@@ -394,6 +416,8 @@ footer {
     border-color: #315591;
     color: #fff; }
 
+
+img.lazy { width: 100%; }
 /*
  * Clearfix: contain floats
  *

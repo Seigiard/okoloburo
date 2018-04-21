@@ -15,7 +15,7 @@ html {
 }
 
 a {
-    @include link($link-color, $link-border-color, $link-color, #fff, 2px);
+    @include link($link-color, $link-hover-color);
 }
 
 @import "_typography.scss";
